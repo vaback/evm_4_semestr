@@ -1,10 +1,6 @@
 #Это файл 20 для лабораторной работы 2
 class Solution(object):
     def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
         # Словарь для сопоставления закрывающих скобок с открывающими
         bracket_map = {
             ')': '(',

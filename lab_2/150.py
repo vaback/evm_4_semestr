@@ -1,10 +1,6 @@
 #Это файл 150 для лабораторной работы 2
 class Solution(object):
     def evalRPN(self, tokens):
-        """
-        :type tokens: List[str]
-        :rtype: int
-        """
         # Стек для хранения операндов
         stack = []
         
