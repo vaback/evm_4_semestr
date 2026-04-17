@@ -1,29 +1,20 @@
 class Solution(object):
     def generateParenthesis(self, n):
-        result = []  # Здесь будем хранить все готовые комбинации
+        result = []
         
         def backtrack(current, left, right):
-            # current: текущий список символов (например, ['(', '('])
-            # left: сколько '(' уже использовали
-            # right: сколько ')' уже использовали
-            
-            # Базовый случай: использовали все скобки
-            if left == right == n:
-                # Превращаем список в строку и добавляем в результат
-                result.append(''.join(current))
+            # Если использовали все скобки - сохраняем результат
+            if left == n and right == n:
+                result.append(current)
                 return
             
-            # Правило 1: можем добавить '(' если ещё не использовали все
+            # Добавляем открывающую скобку, если можно
             if left < n:
-                current.append('(')           # Добавляем
-                backtrack(current, left + 1, right)  # Рекурсивно идём дальше
-                current.pop()                 # Убираем (backtrack!)
+                backtrack(current + '(', left + 1, right)
             
-            # Правило 2: можем добавить ')' если закрывающих меньше чем открывающих
+            # Добавляем закрывающую скобку, если можно
             if right < left:
-                current.append(')')           # Добавляем
-                backtrack(current, left, right + 1)  # Рекурсивно идём дальше
-                current.pop()                 # Убираем (backtrack!)
+                backtrack(current + ')', left, right + 1)
         
-        backtrack([], 0, 0)  # Начинаем с пустого списка
+        backtrack("", 0, 0)
         return result
