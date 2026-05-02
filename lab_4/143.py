@@ -34,4 +34,4 @@ class Solution(object):
             
             # Двигаем указатели
             first = temp1
-            second = temp2
+            second = temp2 

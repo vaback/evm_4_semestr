@@ -26,4 +26,4 @@ class Solution(object):
             if l2 is not None:
                 l2 = l2.next
         
-        return dummy.next
+        return dummy.next 

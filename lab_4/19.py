@@ -19,4 +19,4 @@ class Solution(object):
         # Удаляем узел
         current.next = current.next.next
         
-        return head
+        return head 

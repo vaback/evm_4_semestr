@@ -9,4 +9,4 @@ class Solution(object):
             prev = current             # двигаем prev вперед
             current = next_temp        # двигаем current вперед
         
-        return prev  # prev теперь указывает на новую голову списка
+        return prev  # prev теперь указывает на новую голову списка 
